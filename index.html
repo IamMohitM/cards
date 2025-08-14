@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card</title>
-    <link href="style.css" rel="stylesheet"/>
+    <title>Cards</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 </head>
+
 <body>
     <div class="card">
         <div class="internal-card" style="border: 2px solid rgb(141, 99, 8);">
             <h2>Certificate of Appreciation</h1>
-            <img src="assets/1.jpeg" alt="Nice Richa Image"/>
-            <!-- <p>This is to certify that Ms. Richa Karia's conduct has been satisfactory and that she has successfully been under the tolerable threshold for the last 14 months.  There were her boyfriend, Mr. Awesome aka. Mohit presents her with this certificate of Achievement.</p> -->
-            <p class="para">This is to certify that Ms. Richa Karia's conduct has been satisfactory and that she has remained within the acceptable tolerable threshold for the last <span id="days-count"></span> days. As a result, her boyfriend, Mr. Awesome aka Mohit, presents her with this Certificate of Achievement.
+                <img src="assets/1.jpeg" alt="Nice Richa Image" />
+                <!-- <p>This is to certify that Ms. Richa Karia's conduct has been satisfactory and that she has successfully been under the tolerable threshold for the last 14 months.  There were her boyfriend, Mr. Awesome aka. Mohit presents her with this certificate of Achievement.</p> -->
+                <p class="para">This is to certify that Ms. Richa Karia's conduct has been satisfactory and that she has
+                    remained within the acceptable tolerable threshold for the last <span id="days-count"></span> days.
+                    As a result, her boyfriend, Mr. Awesome aka Mohit, presents her with this Certificate of
+                    Achievement.
 
-            <p class="para">Congratulations on your lifetime achievement. We hope that you will continue to be a good boy.</p>
+                <p class="para">Congratulations on your lifetime achievement. We hope that you will continue to be a
+                    good boy.</p>
         </div>
-        
+
     </div>
 </body>
 
 <script>
 
-// Set the fixed start date (e.g., 14 June 2024)
+
+    const jsConfetti = new JSConfetti();
+    window.onload = function () {
+        jsConfetti.addConfetti({
+            particleCount: 1000
+        });
+    }
+
+    // Set the fixed start date (e.g., 14 June 2024)
     const startDate = new Date('2024-06-15');
     const today = new Date();
     const diffTime = today - startDate;
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
     document.getElementById('days-count').textContent = diffDays;
 </script>
+
 </html>

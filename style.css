@@ -1,0 +1,28 @@
+body{
+    background-color: aquamarine;
+}
+
+.card{
+    border: 1px solid black;
+    background-color: beige;
+    width: 50%;
+    margin: 1% 25%;
+    height: 50%;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+img{
+    width: 50%;
+    margin: 0% 25%;
+}
+
+.internal-card{
+    /* text-align: justify; */
+    padding: 1rem;
+}
+
+.para{
+    text-align: justify;
+}
